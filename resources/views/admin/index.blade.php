@@ -25,15 +25,15 @@
                     <td>{{ $project->languages }}</td>
                     <td class="d-flex gap-3">
                         <a href="{{ route('admin.projects.show', ['project' => $project->slug]) }}"
-                            class="btn btn-success">Più Dettagli</a>
+                            class="btn btn-success"><i class="fa-solid fa-eye"></i></a>
                         <a href="{{ route('admin.projects.edit', ['project' => $project->slug]) }}"
-                            class="btn btn-warning">Modifica</a>
+                            class="btn btn-warning"><i class="fa-solid fa-pen"></i></a>
 
                         <form action="{{ route('admin.projects.destroy', ['project' => $project->slug]) }}" method="POST">
 
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger">Elimina</button>
+                            <button type="submit" class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></button>
 
                         </form>
                     </td>
